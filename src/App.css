@@ -1,0 +1,67 @@
+:root {
+  color: #0f0f0f;
+  background-color: #141416;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  margin: 0;
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Sometype Mono', monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 72px;
+  font-weight: 100;
+}
+
+.desc {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.pear-logo {
+  width: 62px;
+  height: 89px;
+  margin-right: 2.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #141416;
+  }
+
+  a:hover {
+    color: #24c8db;
+  }
+
+  input,
+  button {
+    color: #ffffff;
+    background-color: #0f0f0f98;
+  }
+  button:active {
+    background-color: #0f0f0f69;
+  }
+}
