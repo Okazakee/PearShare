@@ -2,8 +2,8 @@
 name = "PearShare"
 version = "0.1.0"
 description = "PearShare - P2P file sharing with 🕳️🥊"
-authors = ["you"]
-edition = "2024"
+authors = ["Okazakee"]
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
