@@ -1,17 +1,15 @@
-import { useRef } from 'react'
-
-function FilePicker({ selectedFile, setSelectedFile }) {
-  const fileInputRef = useRef(null)
+const FilePicker = ({ selectedFile, setSelectedFile }) => {
+  const fileInputRef = useRef(null);
 
   const handleClick = () => {
-    fileInputRef.current.click()
-  }
+    fileInputRef.current.click();
+  };
 
   const handleFileChange = (e) => {
     if (e.target.files?.[0]) {
-      setSelectedFile(e.target.files[0])
+      setSelectedFile(e.target.files[0]);
     }
-  }
+  };
 
   return (
     <div className="file-picker">
@@ -30,7 +28,5 @@ function FilePicker({ selectedFile, setSelectedFile }) {
         onChange={handleFileChange}
       />
     </div>
-  )
-}
-
-export default FilePicker
+  );
+};

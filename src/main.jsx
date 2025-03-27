@@ -1,7 +1,8 @@
+// main.jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import "./App.css";
+import './App.css';
 import { PearProvider } from './contexts/PearContext';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
