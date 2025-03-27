@@ -1,6 +1,35 @@
-import "./App.css";
+import { useContext, useState } from 'react';
+import PearContext from './contexts/PearContext';
+import './App.css';
+import pearLogo from './assets/pear.png';
 
 function App() {
+  const { yourLink, connectToPeer, sendFile, isLoading } = useContext(PearContext);
+  const [friendLink, setFriendLink] = useState('');
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleConnect = async () => {
+    const success = await connectToPeer(friendLink);
+    if (success) {
+      console.log('Connected to peer successfully');
+    } else {
+      alert('Failed to connect to peer');
+    }
+  };
+
+  const handleSend = async () => {
+    if (!selectedFile) {
+      alert('Please select a file first');
+      return;
+    }
+
+    const success = await sendFile(selectedFile);
+    if (success) {
+      alert('File sent successfully!');
+    } else {
+      alert('Failed to send file');
+    }
+  };
 
   return (
     <main className="container">
@@ -43,5 +72,3 @@ function App() {
     </main>
   );
 }
-
-export default App;
